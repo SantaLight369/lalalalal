@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TSA Interactive Page</title>
+  <link rel="stylesheet" href="interactive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar">
+    <div class="navdiv">
+      <a href="index.html">
+        <img src="image/logo image.png" alt="Logo" height="110"/>
+    </a>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourstory.html">Our Story</a></li>
+      <li><a href="interactive.html">Timeline</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="highlights.html">Highlights</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="referance.html">Reference Page</a></li>
+    </ul>
+
+      </div>
+    </nav>
+    <h3 class="hints">This timeline provides the history of how our TSA club formed. Click on the <mark>dots</mark> to see the events!</h3>
+    <div class="timeline-wrapper">
+      <ul class="timeline">
+        <li data-date="Around 30 years ago...">
+          <span class="title">The SFHS TSA club is established</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>Around 30 years go</small>
+            <p>The first chapter of the SFHS TSA begins at the high school.</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="The 2017-2018 school year">
+          <span class="title">The current advisor for SF TSA takes over the club</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>2017-2018</small>
+            <p>The current advisor today for the club took it over during the 2017-2018 year, after the previous advisor retired.</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="The summer of 2023">
+          <span class="title">Winning the most awards</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>2023</small>
+            <p>That year, the members of the TSA club brought home the most awards from Nationals.</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="End of 2024">
+          <span class="title">The Crumbl Cookie fundraiser</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>2024</small>
+            <p>TSA collaborated with Crumbl Cookies last year. A person could go to buy cookies and show a flyer explaining that they want to donate to TSA. It worked out terrific for the SFHS TSA club.</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="The 2025-2026 school year">
+          <span class="title">The SFHS TSA club grows strong.</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>2025-2026</small>
+            <p>This year, TSA has grown to be one of the biggest clubs in SF high school. From 11 members the first year it has grown to around 100-120 members today.</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="TBD">
+          <span class="title">Tune in to see more events of our club!</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>TBD</small>
+            <p>Check out our previous events!</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+        <li data-date="TBD">
+          <span class="title">Tune in to see more events of our club!</span>
+          <div class="data">
+            <h3>At this time...</h3>
+            <small>TBD</small>
+            <p>Check out our previous events!</p>
+            <span class="close">Click to Close</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+
+      const timeline_wrapper = document.querySelector('.timeline-wrapper'),
+      timelines = document.querySelectorAll('.timeline li .data');
+
+      for(const time of timelines) {
+        time.onclick = ()=> time.classList.toggle('show')
+      }
+
+      timeline_wrapper.addEventListener('mousemove', (event)=>{
+        const timeline = document.querySelector('.timeline');
+        let scroll_width = event.pageX / timeline_wrapper.clientWidth 
+        * (timeline_wrapper.clientWidth - timeline.clientWidth);
+        
+        timeline.style.left = scroll_width.toFixed(1) + 'px';
+      })
+
+    </script>
+
+  <footer class="site-footer">
+      <p>&copy; 2025 South Fayette HS TSA. All rights reserved.</p>
+    </footer>
+  
+    </body>
+  </html>
