@@ -101,6 +101,17 @@ img {
     height: auto;
 }
 
+.yas {
+    display: flex;
+    justify-self: center;
+    gap: 8px; 
+}
+
+.yas img {
+    width: 325px;
+    height: auto;
+}
+
 .nav-menu {
     display: flex;
     flex-direction: column;
